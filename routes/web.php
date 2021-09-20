@@ -24,3 +24,7 @@ Route::get('/about', function () {
 Route::get('/login', function () {
     return view('home.login');
 })->name('login');
+
+Route::get('/services', function () {
+    return view('home.services');
+})->name('services');

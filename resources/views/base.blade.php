@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Engitech</title>
+    <title>Global fine</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/woocommerce.css"/>
     <link rel="stylesheet" href="css/magnific-popup.css" />
 
     <link rel="stylesheet" href="style.css" />
@@ -75,9 +76,9 @@
                                             </li>
                                             <li class="menu-item-has-children"><a href="#">{{ __('home.services') }}</a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="it-services.html">It Services</a></li>
-                                                    <li><a href="web-development.html">Web Development</a></li>
-                                                    <li><a href="mobile-development.html">Mobile Development</a></li>
+                                                    <li><a href="{{ route('services') }}">Automobile</a></li>
+                                                    <li><a href="web-development.html">Event organization</a></li>
+                                                    <li><a href="mobile-development.html">Marketing professionnel</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children"><a href="#">{{ __('home.projects') }}</a>
@@ -91,7 +92,7 @@
                                                             <li><a href="portfolio-no-gap.html">Portfolio No Gap</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li class="menu-item-has-children"><a href="portfolio-details-1.html">Portfolio Details</a>
+                                                    <li class="menu-item-has-children"><a href="portfolio-details-1.html">Autres facilitation</a>
                                                         <ul class="sub-menu">
                                                             <li><a href="portfolio-details-1.html">Single Layout 1</a></li>
                                                             <li><a href="portfolio-details-2.html">Single Layout 2</a></li>
@@ -191,7 +192,7 @@
                                 </li>
                                 <li class="menu-item-has-children"><a href="#">Services</a>
                                     <ul class="sub-menu">
-                                        <li><a href="it-services.html">It Services</a></li>
+                                        <li><a href="{{ route('services') }}">Products</a></li>
                                         <li><a href="web-development.html">Web Development</a></li>
                                         <li><a href="mobile-development.html">Mobile Development</a></li>
                                     </ul>
