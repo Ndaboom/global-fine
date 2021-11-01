@@ -10,9 +10,13 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.54",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "laravelcollective/html": "^6.2",
+        "livewire/livewire": "^2.6",
+        "spatie/laravel-medialibrary": "9.0.0"
     },
     "require-dev": {
+        "dipeshsukhia/laravel-country-state-city-data": "^2.0",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
