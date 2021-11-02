@@ -112,6 +112,9 @@
                                             @endcan
                                             @if (Auth::check())
                                             <li>
+                                                <a href="/translations">{{ __('Translations') }}</a>
+                                            </li>
+                                            <li>
                                                 {{ Form::open(array('route' => 'auth.logout')) }}
                                                 <button style="    border: 0;outline: none;font-weight: bold;white-space: nowrap;background: inherit;" type="submit">{{ __('Log Out') }}</button>
                                                 {{ Form::close() }}

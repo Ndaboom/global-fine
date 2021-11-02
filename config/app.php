@@ -82,7 +82,7 @@ return [
 
     'locale' => 'fr',
 
-     /*
+    /*
     |--------------------------------------------------------------------------
     | Application Available Locales
     |--------------------------------------------------------------------------
@@ -191,8 +191,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        'Barryvdh\TranslationManager\ManagerServiceProvider',
+
+
     ],
-    
+
     /*
     |--------------------------------------------------------------------------
     | Class Aliases

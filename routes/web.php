@@ -19,7 +19,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::group(function () {
-Route::middleware(['get.event.organizers'])->group(function () {
+// Route::middleware([
+//     ,
+//     'localeSessionRedirect',
+//     'localizationRedirect',
+//     'localeViewPath'
+// ])->group([
+//     'prefix' => LaravelLocalization::setLocale()
+// ], function () {
+
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'get.event.organizers']
+], function () {
 
     Route::get('/', function () {
         return view('home');
