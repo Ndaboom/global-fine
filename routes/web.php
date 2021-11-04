@@ -5,6 +5,8 @@ use App\Http\Controllers\Automobile\VehiculeController;
 use App\Http\Controllers\Event\OrganizerController;
 use App\Http\Controllers\Service\ExtraServiceController;
 use App\Http\Controllers\Immovable\PropertyController;
+use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Role\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -77,6 +79,11 @@ Route::group([
                     'delete',
                 ]);
         });
+
+    Route::group(['middleware' => ['auth']], function () {
+        Route::resource('roles', RoleController::class);
+        Route::resource('users', UserController::class);
+    });
 
     Route::prefix('immovable')
         ->name('immovable.')

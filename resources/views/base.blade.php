@@ -111,9 +111,26 @@
                                             </li>
                                             @endcan
                                             @if (Auth::check())
-                                            <li>
-                                                <a href="/translations">{{ __('Translations') }}</a>
+                                            <li class="menu-item-has-children"><a href="#">{{ __('Administration') }}</a>
+                                                <ul>
+                                                    @can('role-create')
+                                                    <li>
+                                                        <a href="/translations">{{ __('Translations') }}</a>
+                                                    </li>
+                                                    @endcan
+                                                    @can('user-create')
+                                                    <li>
+                                                        <a href="{{ route('users.index') }}">{{ __('Users') }}</a>
+                                                    </li>
+                                                    @endcan
+                                                    @can('role-create')
+                                                    <li>
+                                                        <a href="{{ route('roles.index') }}">{{ __('Roles') }}</a>
+                                                    </li>
+                                                    @endcan
+                                                </ul>
                                             </li>
+
                                             <li>
                                                 {{ Form::open(array('route' => 'auth.logout')) }}
                                                 <button style="    border: 0;outline: none;font-weight: bold;white-space: nowrap;background: inherit;" type="submit">{{ __('Log Out') }}</button>

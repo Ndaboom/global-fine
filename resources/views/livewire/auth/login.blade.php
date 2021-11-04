@@ -2,11 +2,11 @@
     <form class="" wire:submit.prevent="submit">
         <p>{{ __('Login for management purposes') }}</p>
         <p class="form-row form-row-first col-lg-12">
-            <input type="text" class="input-text" placeholder="{{ __('Email') }}" wire:model="email">
+            <input type="text" class="input-text" placeholder="{{ __('Email') }}" wire:model.lazy="email">
             @error('email') <span class="error">{{ $message }}</span> @enderror
         </p>
         <p class="form-row form-row-first col-lg-12">
-            <input type="password" class="input-text" placeholder="{{ __('Password') }}" wire:model="password">
+            <input type="password" class="input-text" placeholder="{{ __('Password') }}" wire:model.lazy="password">
             @error('password') <span class="error">{{ $message }}</span> @enderror
         </p>
         <p class="form-row form-row-last col-lg-12">

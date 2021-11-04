@@ -15,7 +15,8 @@
         "laravelcollective/html": "^6.2",
         "livewire/livewire": "^2.6",
         "mcamara/laravel-localization": "^1.6",
-        "spatie/laravel-medialibrary": "9.0.0"
+        "spatie/laravel-medialibrary": "9.0.0",
+        "spatie/laravel-permission": "^5.3"
     },
     "require-dev": {
         "dipeshsukhia/laravel-country-state-city-data": "^2.0",
