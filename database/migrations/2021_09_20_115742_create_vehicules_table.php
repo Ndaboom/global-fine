@@ -18,6 +18,7 @@ class CreateVehiculesTable extends Migration
             $table->bigInteger('price');
             $table->bigInteger('model_id')->constrained();
             $table->bigInteger('user_id')->constrained();
+            $table->bigInteger('sold');
             $table->year('made_year')->nullable();
             $table->string('plate_number', 17)->nullable();
             $table->text('description');

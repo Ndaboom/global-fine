@@ -68,6 +68,22 @@ class PropertyController extends Controller
      */
     public function destroy(Property $property)
     {
-        //
+        $property->delete();
+
+        return redirect()->route('immovable.property.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Immovable\Property  $property
+     * @return \Illuminate\Http\Response
+     */
+    public function toogleTaken(Property $property)
+    {
+        $property->taken = !$property->taken;
+        $property->save();
+
+        return redirect()->route('immovable.property.show', ['property'=>$property]);
     }
 }

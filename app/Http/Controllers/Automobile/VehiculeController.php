@@ -68,6 +68,22 @@ class VehiculeController extends Controller
      */
     public function destroy(Vehicule $vehicule)
     {
-        //
+        $vehicule->delete();
+
+        return redirect()->route('automobile.vehicule.index');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Automobile\Vehicule  $vehicule
+     * @return \Illuminate\Http\Response
+     */
+    public function toogleSold(Vehicule $vehicule)
+    {
+        $vehicule->sold = !$vehicule->sold;
+        $vehicule->save();
+
+        return redirect()->route('automobile.vehicule.show', ['vehicule' => $vehicule]);
     }
 }

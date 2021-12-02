@@ -15,23 +15,23 @@
                     <div class="product-slide">
                         <div class="zoom"></div>
                         <div class="single-product owl-carousel owl-theme">
-                        @foreach ($property->getMedia('images') as $key=>$image)
+                            @foreach ($property->getMedia('images') as $key=>$image)
                             <div class="item" data-hash="{{ $key }}">
                                 <a href="{{ asset($image->getUrl('thumb')) }}" class="link-image-action"><i class="flaticon-search"></i></a>
                                 <img src="{{ asset($image->getUrl('thumb')) }}" alt="" data-zoom="{{ asset($image->getUrl('thumb')) }}">
                             </div>
-                        @endforeach
+                            @endforeach
                         </div>
                         <div class="nav-img">
-                        @foreach ($property->getMedia('images') as $key=>$image)
+                            @foreach ($property->getMedia('images') as $key=>$image)
                             <div class="item">
                                 <div>
                                     <a class="" href="#{{$key}}">
                                         <img src="{{ asset($image->getUrl('thumb')) }}" alt="">
-                                    </a> 
+                                    </a>
                                 </div>
                             </div>
-                        @endforeach
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -45,15 +45,15 @@
                                 <span><i class="fa fa-star"></i></span>
                                 <span><i class="fa fa-star"></i></span>
                                 <span><i class="fa fa-star"></i></span>
-                                <a href="#reviews" class="woocommerce-review-link" rel="nofollow"> 
-                                @can('update', $property)
+                                <a href="#reviews" class="woocommerce-review-link" rel="nofollow">
+                                    @can('update', $property)
                                     <a href="{{ route('immovable.property.edit', $property) }}">Mettre à jour</a>
-                                @endcan  
+                                    @endcan
                                 </a>
                             </div>
                         </div>
                         <span class="single-price price-product"><span class="amount"><span>$</span>{{ $property->price }}</span></span>
-                        
+
                         <form class="cart" method="post">
                             <div class="single-quantity">
                                 <label class="screen-reader-text">Boost Your Business quantity</label>
@@ -77,37 +77,75 @@
                                 <div class="col-md-6">
                                     <table class="woocommerce-product-attributes shop_attributes">
                                         <tbody>
-                                        
+
                                             <tr>
                                                 <th>Pays</th>
-                                                <td><p>{{ $property->city->state->country->name }}</p></td>
+                                                <td>
+                                                    <p>{{ $property->city->state->country->name }}</p>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Province</th>
-                                                <td><p>{{ $property->city->state->name }}</p></td>
+                                                <td>
+                                                    <p>{{ $property->city->state->name }}</p>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Ville </th>
-                                                <td><p>{{ $property->city->name }}</p></td>
+                                                <td>
+                                                    <p>{{ $property->city->name }}</p>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Commune </th>
-                                                <td><p>{{ $property->commune }}</p></td>
+                                                <td>
+                                                    <p>{{ $property->commune }}</p>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Avenue, N</th>
-                                                <td><p>{{ $property->avenue }}, {{ $property->addr_number }}</p></td>
+                                                <td>
+                                                    <p>{{ $property->avenue }}, {{ $property->addr_number }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Status</th>
+                                                <td>
+                                                    <p>
+                                                        @if($property->status == "For rent")
+                                                        A louer
+                                                        @else
+                                                        A vendre
+                                                        @endif
+                                                    </p>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Etat</th>
-                                                <td><p>
-                                                @if($property->status == "For rent"):    
-                                                    A louer
-                                                @else 
-                                                    A vendre
-                                                @endif
-                                                </p></td>
+                                                <td>
+                                                    <p>
+                                                        @if($property->taken)
+                                                        Déjà prise
+                                                        @else
+                                                        Libre
+                                                        @endif
+                                                    </p>
+                                                </td>
                                             </tr>
+                                            @can('delete', $property)
+                                            <tr>
+                                                <td colspan="2">
+                                                    {{ Form::open(['method'=>'DELETE', 'route'=>['immovable.property.destroy', $property->id], 'style'=>'display:inline-block']) }}
+                                                    {{ Form::submit('Delete', ['class'=>'btn btn-danger']) }}
+                                                    {{ Form::close() }}
+
+                                                    {{ Form::open(['method'=>'POST', 'route'=>['immovable.property.toggle_taken', $property->id], 'style'=>'display:inline-block']) }}
+                                                    @method('PUT')
+                                                    {{ Form::submit($property->taken? __('Free property'): __('Property taken'), ['class'=>'btn btn-primary']) }}
+                                                    {{ Form::close() }}
+                                                </td>
+                                            </tr>
+                                            @endcan
                                         </tbody>
                                     </table>
                                 </div>
@@ -166,7 +204,7 @@
                                         <textarea id="comment" name="comment" cols="45" rows="8" placeholder="Comment *" required=""></textarea>
                                     </p>
                                     <p class="form-submit">
-                                        <input name="submit" type="submit" id="submit" class="octf-btn" value="Submit"> 
+                                        <input name="submit" type="submit" id="submit" class="octf-btn" value="Submit">
                                     </p>
                                 </form>
                             </div>
@@ -176,7 +214,7 @@
             </div>
         </div>
     </section>
-    
+
 </div>
 
 <!-- My code end -->
