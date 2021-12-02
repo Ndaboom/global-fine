@@ -22,6 +22,16 @@
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/revolution/revolution/css/navigation.css') }}">
 
+    <style>
+        .users_table{
+            margin:25px;
+        }
+
+        .roles_table{
+            margin: 25px;
+            max-width: 600px;
+        }
+    </style>
     @livewireStyles
 </head>
 

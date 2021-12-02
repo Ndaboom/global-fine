@@ -3,12 +3,12 @@
 <div class="uk-card">
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="uk-text-center">
-                <h2 class="uk-card-header uk-text-uppercase">{{ __('User Management') }}</h2>
+            <div class="uk-text-center text-center" style="padding-top: 10px;">
+                <h3 class="uk-card-header uk-text-uppercase" style="padding-left: 25px;">{{ __('User Management') }}</h3>
             </div>
             @can('user-create')
-            <div class="uk-text-right">
-                <a class="uk-button uk-button-primary uk-button-large" href="{{ route('users.create') }}"> {{ __('Create New User') }}</a>
+            <div class="uk-text-right text-right">
+                <a class="uk-button uk-button-primary uk-button-large" style="margin-right: 25px;" href="{{ route('users.create') }}"> {{ __('Create New User') }}</a>
             </div>
             @endcan
         </div>
@@ -21,7 +21,7 @@
     </div>
     @endif
 
-    <table class="uk-table uk-table-striped">
+    <table class="uk-table uk-table-striped users_table">
         <tr>
             <th>{{ __('No') }}</th>
             <th>{{ __('Name') }}</th>
