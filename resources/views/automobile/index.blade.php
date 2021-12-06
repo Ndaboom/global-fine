@@ -30,20 +30,20 @@
                                 <ul class="popular-product clearfix">
                                     <li class="clearfix"> 
                                         <div class="thumb">
-                                            <a href="single-product.html"><img src="images/product/product-3.jpg" alt=""></a>
+                                            <a href=""><img src="images/product/product-3.jpg" alt=""></a>
                                         </div>
                                         <div class="entry-header">
-                                            <h6><a href="single-product.html">Hoodie with Logo</a></h6>
+                                            <h6><a href="">Hoodie with Logo</a></h6>
                                             <span class="price-product"><span class="amount"><span>$</span>39.99</span></span>
                                         </div>
                                     </li>
                           
                                     <li class="clearfix"> 
                                         <div class="thumb">
-                                            <a href="single-product.html"><img src="images/product/product-6.jpg" alt=""></a>
+                                            <a href=""><img src="images/product/product-6.jpg" alt=""></a>
                                         </div>
                                         <div class="entry-header">
-                                            <h6><a href="single-product.html">Case for IPhone 11 Pro</a></h6>
+                                            <h6><a href="">Case for IPhone 11 Pro</a></h6>
                                             <span class="price-product">
                                                 <del><span class="amount"><span>$</span>59.99</span></del> 
                                                 <ins><span class="amount"><span>$</span>29.99</span></ins>
@@ -53,10 +53,10 @@
                           
                                     <li class="clearfix"> 
                                         <div class="thumb">
-                                            <a href="single-product.html"><img src="images/product/product-5.jpg" alt=""></a>
+                                            <a href=""><img src="images/product/product-5.jpg" alt=""></a>
                                         </div>
                                         <div class="entry-header">
-                                            <h6><a href="single-product.html">T-Shirt with Logo</a></h6>
+                                            <h6><a href="">T-Shirt with Logo</a></h6>
                                             <span class="price-product"><span class="amount"><span>$</span>29.99</span></span>
                                         </div>
                                     </li>
@@ -102,20 +102,20 @@
                                         <li class="clearfix"> 
                                             <a href="#" class="remove remove_from_cart_button">×</a> 
                                             <div class="thumb">
-                                                <a href="single-product.html"><img src="images/product/product-3.jpg" alt=""></a>
+                                                <a href=""><img src="images/product/product-3.jpg" alt=""></a>
                                             </div>
                                             <div class="entry-header">
-                                                <h6><a href="single-product.html">Hoodie with Logo</a></h6>
+                                                <h6><a href="">Hoodie with Logo</a></h6>
                                                 <span class="price-product"><span class="quantity">1 × </span><span class="amount"><span>$</span>39.99</span></span>
                                             </div>
                                         </li>
                                         <li class="clearfix"> 
                                             <a href="#" class="remove remove_from_cart_button">×</a> 
                                             <div class="thumb">
-                                                <a href="single-product.html"><img src="images/product/product-5.jpg" alt=""></a>
+                                                <a href=""><img src="images/product/product-5.jpg" alt=""></a>
                                             </div>
                                             <div class="entry-header">
-                                                <h6><a href="single-product.html">T-Shirt with Logo</a></h6>
+                                                <h6><a href="">T-Shirt with Logo</a></h6>
                                                 <span class="price-product"><span class="quantity">1 × </span><span class="amount"><span>$</span>39.99</span></span>
                                             </div>
                                         </li>

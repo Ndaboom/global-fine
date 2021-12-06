@@ -10,7 +10,7 @@
                         <div class="top-left-v5">
                             <div class="ot-heading">
                                 <span>// For Over 15 Years. For Millions of Users</span>
-                                <h2 class="main-heading">Global fine</h2>
+                                <h3 class="main-heading" style="color: white;">Global fine Service</h3>
                             </div>
                             <p class="sub-text">Une société spécialisée dans la facilitation d'affaires,location,achat et
                                 vente des immobiliers, des automobiles et dans la facilitation de la recherche du visa pour
@@ -39,30 +39,29 @@
             <div class="container">
                 <div class="row mt--70 justify-content-center">
                     <div class="col-lg-4 col-md-6">
-                        <div class="serv-box s1 v5 bg-s1 md-mb-30">
+                        <div class="serv-box s1 v5 bg-s1 md-mb-30" style="min-height: 167px;">
                             <a href="it-services.html" class="overlay"></a>
                             <div class="icon-main"><span class="flaticon-tablet"></span></div>
                             <div class="content-box">
-                                <h5>L’organisation Complet Des Activités Ou événements</h5>
+                                <h5>SERVICE DE COURTAGE </h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="serv-box s1 v5 bg-s2 md-mb-30">
+                        <div class="serv-box s1 v5 bg-s2 md-mb-30" style="min-height: 167px;">
                             <a href="web-development.html" class="overlay"></a>
                             <div class="icon-main"><span class="flaticon-report"></span></div>
                             <div class="content-box">
-                                <h5>Facilitation d’achat, Vente Et Location Des Automobiles/
-                                    Immobiliers</h5>
+                                <h5>SERVICE EVENEMENTIEL</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="serv-box s1 v5 bg-s3">
+                        <div class="serv-box s1 v5 bg-s3" style="min-height: 165px;">
                             <a href="mobile-development.html" class="overlay"></a>
                             <div class="icon-main"><span class="flaticon-ui"></span></div>
                             <div class="content-box">
-                                <h5>Commission, Course Et Marketing professionnel</h5>
+                                <h5>SERVICE DE MARKETING ET COMMUNICATION</h5>
                             </div>
                         </div>
                     </div>
@@ -79,47 +78,43 @@
                 <div class="space-30"></div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-30">
-                        <div class="icon-box-s2 s2 border-s1 bg bg1 text-center">
-                            <div class="icon-main"><span class="flaticon-code"></span></div>
-                            <div class="content-box">
-                                <h5><a href="#">L’organisation Des activités ou événements</a></h5>
-                                <p style="height: 160px;">Nous élaborons un plan évènementiel qui correspond à la demande du client adapter à son
-                                    budget ou à ses moyens...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-30">
                         <div class="icon-box-s2 s2 border-s1 bg bg2 text-center">
                             <div class="icon-main"><span class="flaticon-app"></span></div>
                             <div class="content-box">
-                                <h5><a href="#">Facilitation des opérations d’achat, vente et de location des automobiles et des
-                                    immobilier</a></h5>
-                                <p style="height: 90px;">Pour l’acheteur nous lui trouvons ce qu’il désir acheter et nous lui mettons en contacts avec
-                                    le vendeur ou le fournisseur...</p>
+                                <h5><a href="#">SERVICE DE COURTAGE</a></h5>
+                                <p style="height: 165px;">-	Facilitations dans les opérations d’achat et vente de parcelles et des véhicules<br>
+                                    -	Facilitations dans la location des maisons et des véhicules<br>
+                                    -	Facilitation dans la recherche du visa pour l’espace Schengen et USA
+                                    </p>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="icon-box-s2 s2 border-s1 bg bg1 text-center">
+                            <div class="icon-main"><span class="flaticon-code"></span></div>
+                            <div class="content-box">
+                                <h5><a href="#">SERVICE EVENEMENTIEL </a></h5>
+                                    <p style="height: 165px;">-	Prise en charge complète de vos cérémonies<br>
+                                        -	Service traiteur<br>
+                                        -	Photographie et décors
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+                
                     <div class="col-lg-4 col-md-6 mb-30">
                         <div class="icon-box-s2 s2 border-s1 bg bg3 text-center">
                             <div class="icon-main"><span class="flaticon-monitor"></span></div>
                             <div class="content-box">
-                                <h5><a href="#">Service commissionnaire, courtier et coursier</a></h5>
-                                <p style="height: 160px;">Nous disponibilisons une équipe de commissionnaire au client en fin de lui
-                                    obtenir ce dont il a besoin dans un bref délais si cela ne figure pas dans le stock que nous
-                                    avons déjà et...</p>
+                                <h5><a href="#">SERVICE DE MARKETING ET COMMUNICATION</a></h5>
+                                <p style="height: 145px;">-	Conception et réalisation de vos plans de communication<br>
+                                    -	conception et réalisation du marketing en 3D
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 mb-30 mb-md-0">
-                        <div class="icon-box-s2 s2 border-s1 bg bg4 text-center">
-                            <div class="icon-main"><span class="flaticon-browser"></span></div>
-                            <div class="content-box">
-                                <h5><a href="#">Réalisation d’un marketing professionnel</a></h5>
-                                <p style="height: 160px;">Nous élaborons le plan d’un marketing professionnel qui correspond à la demande du client
-                                    adapter à son budget ou à ses moyens,...</p>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </section>

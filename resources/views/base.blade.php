@@ -69,7 +69,7 @@
                                 <div class="octf-col logo-col">
                                     <div id="site-logo" class="site-logo">
                                         <a href="{{ route('home') }}">
-                                            <img src="{{ asset('images/logo.svg') }}" alt="Engitech" class="">
+                                            <img src="{{ asset('images/logo.png') }}" alt="Engitech" class="">
                                         </a>
                                     </div>
                                 </div>
@@ -197,7 +197,7 @@
                     <div class="mlogo_wrapper clearfix">
                         <div class="mobile_logo">
                             <a href="{{ route('home') }}">
-                                <img src="{{ asset('images/logo.svg') }}" alt="Global fine">
+                                <img src="{{ asset('images/logo.png') }}" alt="Global fine">
                             </a>
                         </div>
                         <div id="mmenu_toggle">
@@ -207,64 +207,79 @@
                     <div class="mmenu_wrapper">
                         <div class="mobile_nav collapse">
                             <ul id="menu-main-menu" class="mobile_mainmenu">
-                                <li class="menu-item-has-children current-menu-item current-menu-ancestor">
-                                    <a href="{{ route('home') }}">{{ __('Welcome')}}</a>
+                                <li>
+                                    <a href="{{ route('home') }}">{{ __('Welcome') }}</a>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">{{ __('Automobile') }}</a>
                                     <ul class="sub-menu">
-                                        <li class="current-menu-item"><a href="{{ route('home') }}">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                        <li><a href="index-3.html">Home 3</a></li>
-                                        <li><a href="index-4.html">Home 4</a></li>
-                                        <li><a href="index-5.html">Home 5</a></li>
+                                        @can('create', App\Models\Automobile\Vehicule::class)
+                                        <li><a href="{{ route('automobile.vehicule.create') }}">{{ __('New') }}</a></li>
+                                        @endcan
+                                        @can('viewAny', App\Models\Automobile\Vehicule::class)
+                                        <li><a href="{{ route('automobile.vehicule.index') }}">{{ __('View all') }}</a></li>
+                                        @endcan
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="#">Company</a>
+                                <li class="menu-item-has-children"><a href="#">{{ __('Immobiliers') }}</a>
                                     <ul class="sub-menu">
-                                        <li><a href="about-us.html">About us</a></li>
-                                        <li><a href="why-choose-us.html">Why Choose Us</a></li>
-                                        <li><a href="our-team.html">Our team</a></li>
-                                        <li><a href="single-team.html">Single team</a></li>
-                                        <li class="menu-item-has-children"><a href="shop.html">Shop</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="single-product.html">Single Product</a></li>
-                                                <li><a href="checkout-page.html">Checkout Page</a></li>
-                                                <li><a href="cart-page.html">Cart Page</a></li>
-                                            </ul>
+                                        @can('create', App\Models\Immovable\Property::class)
+                                        <li><a href="{{ route('immovable.property.create') }}">{{ __('New') }}</a></li>
+                                        @endcan
+                                        @can('viewAny', App\Models\Immovable\Property::class)
+                                        <li><a href="{{ route('immovable.property.index') }}">{{ __('View all') }}</a></li>
+                                        @endcan
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">{{ __('Event organizer') }}</a>
+                                    <ul class="sub-menu">
+                                        @can('create', App\Models\Event\Organizer::class)
+                                        <li><a href="{{ route('event.organizer.create') }}">{{ __('New') }}</a></li>
+                                        @can('create', App\Models\Service\ExtraService::class)
+                                        <li><a href="{{ route('service.extraService.create') }}">{{ __('Create other service') }}</a></li>
+                                        @endcan
+                                        @endcan
+                                        @can('viewAny', App\Models\Event\Organizer::class)
+                                        @foreach ($organizers as $organizer)
+                                        <li><a href="{{ route('event.organizer.show', [$organizer->id]) }}">{{ $organizer->name }}</a>
                                         </li>
-                                        <li><a href="typography.html">Typography</a></li>
-                                        <li><a href="elements.html">Elements</a></li>
-                                        <li><a href="faq.html">FAQS</a></li>
-                                        <li><a href="404-error.html">404 Error</a></li>
-                                        <li><a href="cooming-soon.html">Coming Soon</a></li>
+                                        @endforeach
+                                        @endcan
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="#">Services</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="it-services.html">It Services</a></li>
-                                        <li><a href="web-development.html">Web Development</a></li>
-                                        <li><a href="mobile-development.html">Mobile Development</a></li>
-                                    </ul>
+                                @can('viewAny', App\Models\Service\ExtraService::class)
+                                <li>
+                                    <a href="{{ route('service.extraService.index') }}">{{ __('Other services') }}</a>
                                 </li>
-                                <li class="menu-item-has-children"><a href="#">Projects</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
-                                        <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
-                                        <li class="menu-item-has-children"><a href="portfolio-grid.html">Portfolio Grid</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="portfolio-grid.html">Portfolio 3 Columns</a></li>
-                                                <li><a href="portfolio-4-column.html">Portfolio 4 Columns</a></li>
-                                                <li><a href="portfolio-no-gap.html">Portfolio No Gap</a></li>
-                                            </ul>
+                                @endcan
+                                @if (Auth::check())
+                                <li class="menu-item-has-children"><a href="#">{{ __('Administration') }}</a>
+                                    <ul>
+                                        @can('role-create')
+                                        <li>
+                                            <a href="/translations">{{ __('Translations') }}</a>
                                         </li>
-                                        <li class="menu-item-has-children"><a href="portfolio-details-1.html">Portfolio Details</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="portfolio-details-1.html">Single Layout 1</a></li>
-                                                <li><a href="portfolio-details-2.html">Single Layout 2</a></li>
-                                                <li><a href="portfolio-details-3.html">Single Layout 3</a></li>
-                                            </ul>
+                                        @endcan
+                                        @can('user-create')
+                                        <li>
+                                            <a href="{{ route('users.index') }}">{{ __('Users') }}</a>
                                         </li>
+                                        @endcan
+                                        @can('role-create')
+                                        <li>
+                                            <a href="{{ route('roles.index') }}">{{ __('Roles') }}</a>
+                                        </li>
+                                        @endcan
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contacts</a></li>
+
+                                <li>
+                                    {{ Form::open(array('route' => 'auth.logout')) }}
+                                    <button style="    border: 0;outline: none;font-weight: bold;white-space: nowrap;background: inherit;" type="submit">{{ __('Log Out') }}</button>
+                                    {{ Form::close() }}
+                                </li>
+                                @else
+                                <li><a href="{{ route('auth.login') }}">{{ __('Login') }}</a></li>
+                                @endif
                             </ul>
                         </div>
                     </div>

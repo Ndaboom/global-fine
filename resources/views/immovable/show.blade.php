@@ -35,9 +35,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 align-self-center" style="padding-top:10px;">
+                <div class="col-lg-6 mb-4 mb-lg-0 align-self-center" style="margin-top:-300px;">
                     <div class="summary entry-summary">
-                        <h2 class="single-product-title">Immobilier</h2>
+                        <h2 class="single-product-title">Immobilier  @if($property->status == "For rent")   
+                            A louer
+                        @else 
+                            A vendre
+                        @endif  
+                        </h2>
                         <div class="single-product-rating">
                             <div class="star-rating">
                                 <span><i class="fa fa-star"></i></span>
@@ -59,7 +64,7 @@
                                 <label class="screen-reader-text">Boost Your Business quantity</label>
                                 <input type="number" id="quantity" class="input-text qty text" step="1" min="1" name="quantity" value="1" title="Qty" placeholder="">
                             </div>
-                            <button type="submit" name="add-to-cart" class="octf-btn single_add_to_cart_button button alt">CONTACTER VENDEUR</button>
+                            <a href="https://api.WhatsApp.com/send?phone=+250784171263" class="octf-btn single_add_to_cart_button button alt">CONTACTER VENDEUR</a>
                         </form>
                     </div>
                 </div>
@@ -101,7 +106,7 @@
                                             <tr>
                                                 <th>Etat</th>
                                                 <td><p>
-                                                @if($property->status == "For rent"):    
+                                                @if($property->status == "For rent")   
                                                     A louer
                                                 @else 
                                                     A vendre

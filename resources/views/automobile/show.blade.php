@@ -57,7 +57,7 @@
                                         <label class="screen-reader-text">Boost Your Business quantity</label>
                                         <input type="number" id="quantity" class="input-text qty text" step="1" min="1" name="quantity" value="1" title="Qty" placeholder="">
                                     </div>
-                                    <button type="submit" name="add-to-cart" class="octf-btn single_add_to_cart_button button alt">CONTACTER VENDEUR</button>
+                                    <a href="https://api.WhatsApp.com/send?phone=+250784171263" class="octf-btn single_add_to_cart_button button alt">CONTACTER VENDEUR</a>
                                 </form>
                             </div>
                         </div>
