@@ -26,10 +26,12 @@ class Property extends Model implements HasMedia
         'avenue',
         'addr_number',
         'status',
+        'taken'
     ];
 
     protected $casts = [
         'created_at' => 'datetime',
+        'taken' => 'boolean',
     ];
 
     public function registerMediaCollections(): void

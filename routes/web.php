@@ -66,6 +66,8 @@ Route::group([
                     'update',
                     'delete',
                 ]);
+            Route::put('vehicule/{vehicule}', [VehiculeController::class, 'toogleSold'])
+                ->name('vehicule.toggle_sold');
         });
 
     Route::prefix('service')
@@ -93,8 +95,9 @@ Route::group([
                 ->except([
                     'store',
                     'update',
-                    'delete',
                 ]);
+            Route::put('immovable/property/{property}', [PropertyController::class, 'toogleTaken'])
+                ->name('property.toggle_taken');
         });
 
     Route::prefix('event')

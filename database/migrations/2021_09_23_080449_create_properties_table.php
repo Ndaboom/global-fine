@@ -20,6 +20,7 @@ class CreatePropertiesTable extends Migration
             $table->string('commune');
             $table->string('quarter');
             $table->string('avenue');
+            $table->bigInteger('taken');
             $table->enum('status', ['For rent', 'For sell']);
             $table->string('addr_number');
             $table->bigInteger('user_id')->constrained();

@@ -23,10 +23,12 @@ class Vehicule extends EloquentModel implements HasMedia
         'precision',
         'status',
         'description',
+        'sold'
     ];
 
     protected $casts = [
         'created_at' => 'datetime',
+        'sold' => 'boolean',
     ];
 
     public function registerMediaCollections(): void
