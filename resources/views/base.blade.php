@@ -31,6 +31,13 @@
             margin: 25px;
             max-width: 600px;
         }
+
+        .top-v5{
+            background-image: url(images/background/bg-home.jpg);
+            background-position: center;
+            height: 850px;
+        }
+
     </style>
     @livewireStyles
 </head>
@@ -69,7 +76,7 @@
                                 <div class="octf-col logo-col">
                                     <div id="site-logo" class="site-logo">
                                         <a href="{{ route('home') }}">
-                                            <img src="{{ asset('images/logo.png') }}" alt="Engitech" class="">
+                                            <img src="{{ asset('images/logo.png') }}" alt="Global fine" class="">
                                         </a>
                                     </div>
                                 </div>
@@ -296,46 +303,36 @@
                         <div class="widget-footer">
                             <h5 class="text-white">Services</h5>
                             <ul class="list-items">
-                                <li class="list-item"><a href="web-development.html">Web Development</a></li>
-                                <li class="list-item"><a href="mobile-development.html">Mobile Development</a></li>
-                                <li class="list-item"><a href="it-services.html">On-Demand Apps</a></li>
-                                <li class="list-item"><a href="our-team.html">Dedicated Team</a></li>
-                                <li class="list-item"><a href="it-services.html">iOS & Android</a></li>
+                                <li class="list-item"><a href="">Service de Courtage</a></li>
+                                <li class="list-item"><a href="">Service Evenementiel</a></li>
+                                <li class="list-item"><a href="">Service de Marketing et Communication</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="widget-footer">
-                            <h5 class="text-white">Learn</h5>
+                            <h5 class="text-white">Apprendre</h5>
                             <ul class="list-items">
-                                <li class="list-item"><a href="it-services.html">Social Media Platform</a></li>
-                                <li class="list-item"><a href="it-services.html">Business Management Tools</a></li>
-                                <li class="list-item"><a href="it-services.html">Gambling & Betting Web Apps</a></li>
-                                <li class="list-item"><a href="it-services.html">Sports and Fitness App</a></li>
-                                <li class="list-item"><a href="it-services.html">Software as a Service (SaaS)</a></li>
+                                <li class="list-item"><a href="">Social Media Platform</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="widget-footer">
-                            <h5 class="text-white">Company</h5>
+                            <h5 class="text-white">Global fine Service</h5>
                             <ul class="list-items">
-                                <li class="list-item"><a href="about-us.html">About Company</a></li>
-                                <li class="list-item"><a href="faq.html">For Customers</a></li>
-                                <li class="list-item"><a href="blog.html">Blog & News</a></li>
-                                <li class="list-item"><a href="contact.html">Careers & Reviews</a></li>
-                                <li class="list-item"><a href="contact.html">Sitemap</a></li>
+                                <li class="list-item"><a href="">A propos</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="widget-footer">
-                            <h5 class="text-white">Subscribe</h5>
-                            <p>Follow our newsletter to stay updated about agency.</p>
+                            <h5 class="text-white">S'abonner</h5>
+                            <p>Suivez notre bulletin d'information pour rester à jour sur l'agence.</p>
                             <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-1343" method="post">
                                 <div class="mc4wp-form-fields">
                                     <div class="subscribe-inner-form">
-                                        <input type="email" name="email" placeholder="Your Email" required="">
+                                        <input type="email" name="email" placeholder="Votre Email" required="required">
                                         <button type="submit" class="subscribe-btn-icon"><i class="flaticon-telegram"></i></button>
                                     </div>
                                 </div>
@@ -345,10 +342,10 @@
                 </div>
                 <div class="row mt-65">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="{{ asset('images/logo-light.png') }}" alt="" class="lazyloaded" data-ll-status="loaded">
+                        {{-- <img src="{{ asset('images/logo-light.png') }}" alt="" class="lazyloaded" data-ll-status="loaded"> --}}
                     </div>
                     <div class="col-md-6 text-left text-md-right align-self-center">
-                        <p class="copyright-text">Copyright © 2020 Engitech by ThemeModern. All Rights Reserved.</p>
+                        <p class="copyright-text">Copyright © 2020 Global fine. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
