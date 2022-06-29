@@ -2,11 +2,11 @@
     <form class="" wire:submit.prevent="store">
         <p>{{ __('Add a new car to the collection') }}</p>
         <p class="form-row form-row-first col-lg-12">
-            <input type="text" class="input-text" placeholder="{{ __('Price') }}" wire:model="price">
+            <input type="text" class="input-text form-control" placeholder="{{ __('Price') }}" wire:model="price">
             @error('price') <span class="error">{{ $message }}</span> @enderror
         </p>
         <p class="form-row form-row-first col-lg-12">
-            <select class="input-text" placeholder="{{ __('Make') }}" wire:model="make">
+            <select class="input-text form-control" placeholder="{{ __('Make') }}" wire:model="make">
                 <option selected>{{ __('Select a make') }}</option>
                 @foreach ($makes_list as $make)
                 <option value="{{ $make->id }}">{{ $make->title }}</option>
@@ -16,7 +16,7 @@
         </p>
         @if ($models_list)
         <p class="form-row form-row-first col-lg-12">
-            <select class="input-text" placeholder="{{ __('Model') }}" wire:model="model_id">
+            <select class="input-text form-control" placeholder="{{ __('Model') }}" wire:model="model_id">
                 @foreach ($models_list as $model)
                 <option value="{{ $model->id }}">{{ $model->title }}</option>
                 @endforeach
@@ -25,7 +25,7 @@
         </p>
         @endif
         <p class="form-row form-row-first col-lg-12">
-            <select class="input-text" placeholder="{{ __('Status') }}" wire:model.lazy="status">
+            <select class="input-text form-control" placeholder="{{ __('Status') }}" wire:model.lazy="status">
                 <option selected>{{ __('Select a make') }}</option>
                 <option value="For sell">{{ __('For sell') }}</option>
                 <option value="For rent">{{ __('For rent') }}</option>
@@ -34,18 +34,18 @@
         </p>
 
         <p class="form-row form-row-first col-lg-12">
-            <select class="input-text" placeholder="{{ __('Made year') }}" wire:model.lazy="made_year" {{ $status == 'For rent'? 'disabled': '' }}>
+            <select class="input-text form-control" placeholder="{{ __('Made year') }}" wire:model.lazy="made_year" {{ $status == 'For rent'? 'disabled': '' }}>
                 @for ($i = 1940; $i <= date('Y'); $i++) <option value="{{ $i }}">{{ $i }}</option>
                     @endfor
             </select>
             @error('made_year') <span class="error">{{ $message }}</span> @enderror
         </p>
         <p class="form-row form-row-first col-lg-12">
-            <input type="text" class="input-text" placeholder="{{ __('Plate number') }}" wire:model.lazy="plate_number" {{ $status == 'For rent'? 'disabled': '' }}>
+            <input type="text" class="input-text form-control" placeholder="{{ __('Plate number') }}" wire:model.lazy="plate_number" {{ $status == 'For rent'? 'disabled': '' }}>
             @error('plate_number') <span class="error">{{ $message }}</span> @enderror
         </p>
         <p class="form-row form-row-first col-lg-12">
-            <select class="input-text" placeholder="{{ __('Precision') }}" wire:model.lazy="precision" {{ $status == 'For sell'? 'disabled': '' }}>
+            <select class="input-text form-control" placeholder="{{ __('Precision') }}" wire:model.lazy="precision" {{ $status == 'For sell'? 'disabled': '' }}>
                 <option selected>{{ __('Choose status') }}</option>
                 <option value="With driver">{{ __('With driver') }}</option>
                 <option value="Without driver">{{ __('Without driver') }}</option>
@@ -53,16 +53,16 @@
             @error('precision') <span class="error">{{ $message }}</span> @enderror
         </p>
         <p class="form-row form-row-first col-lg-12">
-            <textarea class="input-text" placeholder="{{ __('Description') }}" wire:model.lazy="description"></textarea>
+            <textarea class="input-text form-control" placeholder="{{ __('Description') }}" wire:model.lazy="description"></textarea>
             @error('description') <span class="error">{{ $message }}</span> @enderror
         </p>
 
         <div class="form-row form-row-last col-lg-12" x-data="{ isUploading: false, progress: 0 }" x-on:livewire-upload-start="isUploading = true" x-on:livewire-upload-finish="isUploading = false" x-on:livewire-upload-error="isUploading = false" x-on:livewire-upload-progress="progress = $event.detail.progress">
             <input required="required" class="input-text" multiple accept="image/*" type="file" wire:model.lazy="images">
             <!-- Progress Bar -->
-            <!-- <div x-show="isUploading" class="uk-width-1-1">
-                <progress max="100" x-bind:value="progress"></progress>
-            </div> -->
+            <div x-show="isUploading" class="uk-width-1-1 progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" x-bind:value="progress"></div>
+            </div>
             @error('images.*') <span class="error">{{ $message }}</span> @enderror
         </div>
         <p class="form-row form-row-last col-lg-12">
